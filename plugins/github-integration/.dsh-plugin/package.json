@@ -5,6 +5,9 @@
   "type": "module",
   "license": "MIT",
   "description": "Static GitHub issue and pull-request campaign workflow skill for DSH",
+  "keywords": [
+    "dsh-plugin"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omdsh-dev/dsh-github-integration.git",

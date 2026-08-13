@@ -110,6 +110,7 @@ assert.equal(manifest.private, true)
 assert.equal(manifest.license, 'MIT')
 assert.equal(manifest.repository?.url,
   'git+https://github.com/omdsh-dev/dsh-github-integration.git')
+assert(manifest.keywords?.includes('dsh-plugin'), 'package discovery keyword is missing')
 assert.deepEqual(manifest.dsh?.skills, ['skills'])
 assert.match(await readFile(resolve(repository, 'LICENSE'), 'utf8'), /^MIT License\n/)
 assert((await stat(resolve(plugin, 'prepare.js'))).size < 20_000,
