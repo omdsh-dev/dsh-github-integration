@@ -1,0 +1,21 @@
+{
+  "name": "github-integration",
+  "version": "0.1.0-rc.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Static GitHub issue and pull-request campaign workflow skill for DSH",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omdsh-dev/dsh-github-integration.git",
+    "directory": "plugins/github-integration/.dsh-plugin"
+  },
+  "scripts": {
+    "prepare": "node prepare.js"
+  },
+  "dsh": {
+    "skills": [
+      "skills"
+    ]
+  }
+}
