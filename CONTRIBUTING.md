@@ -17,7 +17,7 @@ After editing it, run:
 node scripts/verify-release.mjs
 ```
 
-The verifier regenerates and compares the prepared asset, validates the plugin
-wrapper and package contents, checks relative links, and performs a release
-hygiene scan. Commit the source and regenerated asset together. Keep English
-and Chinese documentation aligned when either version changes.
+The verifier validates the direct Skill manifest and package contents, checks
+frontmatter and relative links, rejects high-risk command patterns, and performs
+a release-hygiene scan. There is no generated Repository Plugin asset. Keep
+English and Chinese documentation aligned when either version changes.

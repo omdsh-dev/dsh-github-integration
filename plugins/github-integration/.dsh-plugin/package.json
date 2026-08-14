@@ -1,6 +1,6 @@
 {
   "name": "github-integration",
-  "version": "0.1.0-rc.1",
+  "version": "0.1.0-rc.2",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -13,12 +13,32 @@
     "url": "git+https://github.com/omdsh-dev/dsh-github-integration.git",
     "directory": "plugins/github-integration/.dsh-plugin"
   },
-  "scripts": {
-    "prepare": "node prepare.js"
-  },
-  "dsh": {
-    "skills": [
-      "skills"
-    ]
+  "dshWorkshop": {
+    "schema": "omdsh-workshop-package/v1",
+    "type": "plugin",
+    "integration": {
+      "protocol": "skill",
+      "artifact": "skills/github-issue-pr/SKILL.md"
+    },
+    "install": {
+      "mode": "guided",
+      "adapter": "skill",
+      "failurePolicy": "manual",
+      "touchesCurrentBeforeActivation": false
+    },
+    "lifecycle": {
+      "activation": "immediate",
+      "dispose": "unsupported"
+    },
+    "permissions": [
+      "github:read",
+      "github:write"
+    ],
+    "evidence": {
+      "install": null,
+      "failureIsolation": null,
+      "hotReload": null,
+      "remove": null
+    }
   }
 }
